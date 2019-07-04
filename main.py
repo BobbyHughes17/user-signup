@@ -9,7 +9,7 @@ app.config['DEBUG'] = True
 def sign_up():
     return render_template("form.html")
 
-@app.route('/validate', methods = ['POST'])
+@app.route('/', methods = ['POST'])
 def validate_sign_up():
     user_name = request.form['user_name']
     email_address = request.form['email_address']

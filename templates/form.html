@@ -4,14 +4,32 @@
     <title>Sign Up</title>
 </head>
 <style>
+body{
+    background-color: lightskyblue;
+}
 .error{
     color:red;
 }
+table{
+    border: 5px black double;
+    padding: 20px 20px 20px 20px;
+    background-color:rgb(240, 240, 240);
+}
+
+#submit_form{
+    background-color:lightskyblue;
+}
+.center{
+    margin: 0 auto;
+    width: auto;
+    }
+
 </style>
 <body>
-    <h1>Sign Up</h1>
-    <table>
-        <form action='/validate' method ="POST">
+    <table class="center">
+
+        <form action='/' method ="POST">
+            <th class='center'><h1>Sign Up</h1></th>
             <tr>
                 <td><label for="user_name">User Name</label></td>
                 <td><input id = 'user_name' name = "user_name" type="text" value = "{{user_name}}" /></td>
@@ -29,11 +47,11 @@
             </tr>
             <tr>
                 <td><label for='email_address'>Email Address(Optional)</label></td>
-                <td><input id = 'email_address' name = "email_address" type="text" value={{email_address}} ></td>
+                <td><input id = 'email_address' name = "email_address" type="text" value="{{email_address}}" ></td>
                 <td><span class = "error">{{email_error}}</span></td>
             </tr>
             <tr>
-                <td><input type="submit" action='/' value="Submit"></td>
+                <td class='center'><input id="submit_form" type="submit" action='/' value="Submit"></td>
             </tr>
         </form>
     </table>
