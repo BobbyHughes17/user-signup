@@ -11,10 +11,10 @@
 <body>
     <h1>Sign Up</h1>
     <table>
-        <form action='/' method ="post">
+        <form action='/validate' method ="POST">
             <tr>
                 <td><label for="user_name">User Name</label></td>
-                <td><input id = 'user_name' name = "user_name" type="text" value = {{user_name}} ></td>
+                <td><input id = 'user_name' name = "user_name" type="text" value = "{{user_name}}" /></td>
                 <td><span class = "error">{{user_error}}</span></td>
             </tr>
             <tr>
